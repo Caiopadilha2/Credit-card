@@ -51,14 +51,35 @@ ccCVV.addEventListener('input', e => {
 })
 
 ccCVV.addEventListener('focus', e => {
-  backCard.style = 'display: flex';
-  frontCard.style = 'display: none'
+  frontCard.classList.remove('flip-car', 'flip-card-2')
+  backCard.classList.remove('flip-car', 'flip-card-2')
+
+  frontCard.classList.add('flip-card')
+  
+  setTimeout(() => {
+    frontCard.classList.remove('flip-card')
+    backCard.style = 'display: flex';
+    frontCard.style = 'display: none'
+    backCard.classList.add('flip-card-2')
+
+  }, 250)
+
 })
 
 // Blur - contrátrio do focus
 
 ccCVV.addEventListener('blur', e => {
-  backCard.style = 'display: none'
-  frontCard.style = 'display: flex'
+  frontCard.classList.remove('flip-car', 'flip-card-2')
+  backCard.classList.remove('flip-car', 'flip-card-2')
+
+  backCard.classList.add('flip-card')
+
+  setTimeout(() => {
+    backCard.classList.remove('flip-card')
+    backCard.style = 'display: none'
+    frontCard.style = 'display: flex';
+    frontCard.classList.add('flip-card-2')
+
+  }, 250)
 
 })
