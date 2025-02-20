@@ -12,6 +12,9 @@ const cardExpMonth = document.querySelector('.card-exp-month')
 const cardExpYear = document.querySelector('.card-exp-year')
 const cardCVV = document.querySelector('.card-cvv')
 
+const backCard = document.querySelector('.back-card')
+const frontCard = document.querySelector('.front-card')
+
 ccNumberInput.addEventListener('input', e => {
   // console.log(e.currentTarget.value)
   cardNumber.textContent =
@@ -45,5 +48,17 @@ ccExpYear.addEventListener('input', e => {
 
 ccCVV.addEventListener('input', e => {
   cardCVV.textContent = e.currentTarget.value || 'CVV'
-  
+})
+
+ccCVV.addEventListener('focus', e => {
+  backCard.style = 'display: flex';
+  frontCard.style = 'display: none'
+})
+
+// Blur - contrátrio do focus
+
+ccCVV.addEventListener('blur', e => {
+  backCard.style = 'display: none'
+  frontCard.style = 'display: flex'
+
 })
