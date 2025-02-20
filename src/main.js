@@ -10,11 +10,12 @@ const cardNumber = document.querySelector('.card-number')
 const cardName = document.querySelector('.card-name')
 const cardExpMonth = document.querySelector('.card-exp-month')
 const cardExpYear = document.querySelector('.card-exp-year')
+const cardCVV = document.querySelector('.card-cvv')
 
 ccNumberInput.addEventListener('input', e => {
   // console.log(e.currentTarget.value)
   cardNumber.textContent =
-    formatCardNumber(e.currentTarget.value) || '#### #### #### ####'
+    formatCardNumber(e.currentTarget.value) || 'XXXX XXXX XXXX XXXX'
 
   ccNumberInput.value = formatCardNumber(e.currentTarget.value)
 })
@@ -40,4 +41,9 @@ ccExpMonth.addEventListener('input', e => {
 
 ccExpYear.addEventListener('input', e => {
   cardExpYear.textContent = e.currentTarget.value || 'AA'
+})
+
+ccCVV.addEventListener('input', e => {
+  cardCVV.textContent = e.currentTarget.value || 'CVV'
+  
 })

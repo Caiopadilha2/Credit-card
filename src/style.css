@@ -34,6 +34,7 @@ main {
 .card-section {
   width: 60%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -53,6 +54,9 @@ main {
 .card-logo {
   width: 50px;
   height: 50px;
+}
+
+.front-card .card-logo {
   margin-left: auto;
 }
 
@@ -70,6 +74,8 @@ main {
 .card-expiry-section {
   text-align: right;
 }
+
+/* Formulário */
 
 label,
 input {
@@ -132,4 +138,32 @@ label {
     margin-top: 30px;
     font-size: 20px;
   }
+}
+
+
+/*  Backcard */
+
+.card-magnetic-strip {
+  height: 60px;
+  width: 440px;
+  background-color: rgb(255, 255, 255, 0.5);
+  margin-left: -20px;
+  /* pois o padding é de 20 */
+
+  margin-top: 30px;
+}
+
+.card-cvv {
+  text-align: right;
+  margin-top: 40px;
+}
+
+.back-card .card-logo {
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+
+.back-card {
+  display: none;
 }
