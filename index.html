@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Input de cartão de crédito</title>
+  </head>
+  <body>
+    <main>
+      <!-- Cartão de crédito -->
+      <section class="card-section">
+        <div class="card">
+          <img src="/public/Icon.svg" alt="" class="card-logo" />
+          <p class="card-number">#### #### #### ####</p>
+          <div class="card-footer">
+            <div>
+              <p>Titular</p>
+              <p class="card-name">Seu nome</p>
+            </div>
+            <div class="card-expiry-section">
+              <p>Vencimento</p>
+              <p>
+                <span class="card-exp-month">mm</span>
+                /
+                <span class="card-exp-year">aa</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Formulario -->
+      <section>
+        <h3>Digite os dados do seu cartão</h3>
+        <form action="">
+          <label for="cc-number">Número do cartão</label>
+          <input
+            type="text"
+            id="cc-number"
+            maxlength="19"
+            placeholder="1234 1234 1234 1234"
+          />
+
+          <label for="cc-name">Nome do titular</label>
+          <input type="text" id="cc-name" placeholder="Seu nome" />
+
+          <label>Validade</label>
+          <div class="form-expiry-section">
+            <input
+              type="text"
+              id="cc-exp-month"
+              placeholder="MM"
+              maxlength="2"
+            />
+            <input
+              type="text"
+              id="cc-exp-year"
+              placeholder="AA"
+              maxlength="2"
+            />
+          </div>
+
+          <label for="cc-cvv">Código de verificação</label>
+          <input type="text" id="cc-cvv" placeholder="123" maxlength="3" />
+        </form>
+      </section>
+    </main>
+  </body>
+  <script type="module" src="/src/main.js"></script>
+</html>
