@@ -110,3 +110,26 @@ label {
 ::placeholder {
   color: #ccc;
 }
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card-section {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .card-number {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+}
